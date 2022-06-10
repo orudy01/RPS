@@ -16,7 +16,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    let finalMsg = "Test"
+    let finalMsg = undefined;
 
     let pSelection = playerSelection.toLowerCase();
     let cSelection = computerSelection.toLowerCase();
@@ -28,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
     else if (
         (pSelection === "rock" && cSelection === "scissors") ||
         (pSelection === "paper" && cSelection === "rock") ||
-        (pSelection === "scissors" && cSelection === "paper") 
+        (pSelection === "scissors" && cSelection === "paper")
     ) {
         finalMsg = `You won! You picked ${playerSelection} while the computer picked ${computerSelection}.`;
     }
@@ -36,14 +36,15 @@ function playRound(playerSelection, computerSelection) {
     else if (
         (cSelection === "rock" && pSelection === "scissors") ||
         (cSelection === "paper" && pSelection === "rock") ||
-        (cSelection === "scissors" && pSelection === "paper") 
+        (cSelection === "scissors" && pSelection === "paper")
     ) {
-        finalMsg = `You lost! You picked ${playerSelection} while the computer picked ${computerSelection}.`; 
+        finalMsg = `You lost! You picked ${playerSelection} while the computer picked ${computerSelection}.`;
     }
 
     return finalMsg
 }
 
-console.log(computerPlay());
-
-console.log(playRound("paper", computerPlay()));
+for (let i = 0; i < 5; i++) {
+    let choice = prompt("Whats your weapon of choice?");
+    console.log(playRound(choice, computerPlay()));
+}
