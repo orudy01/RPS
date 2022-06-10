@@ -44,7 +44,9 @@ function playRound(playerSelection, computerSelection) {
     return finalMsg
 }
 
+/*
 for (let i = 0; i < 5; i++) {
     let choice = prompt("Whats your weapon of choice?");
     console.log(playRound(choice, computerPlay()));
 }
+*/
