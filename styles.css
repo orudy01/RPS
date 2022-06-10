@@ -1,0 +1,60 @@
+body {
+    font-family: 'Spinnaker';
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.header-logo img {
+    filter: drop-shadow(5px 5px 10px #000);
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-image: url(./images/header.png);
+    /*background: linear-gradient(233deg, #909297 0%, #F8E5C3 100%);*/
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.header-title p {
+    font-family: 'Satisfy';
+    text-align: center;
+}
+
+.choice-container {
+    background-color: white
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.choices .item img {
+    filter: drop-shadow(5px 5px 10px #000);
+    height: 100px;
+    width: 100px;
+}
+
+.footer-container {
+    margin-top: auto;
+}
+
