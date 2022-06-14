@@ -36,6 +36,8 @@ function playRound(playerSelection, computerSelection) {
     let cSelection = computerSelection.toLowerCase();
 
     if (pSelection === cSelection) {
+        document.getElementById(playerSelection).classList.add('grey-glow');
+        setTimeout(function(){ document.getElementById(playerSelection).classList.remove('grey-glow')}, 500);
         finalMsg = `Tie round! You and the computer picked ${playerSelection}.`;
     }
     else if (
@@ -44,6 +46,8 @@ function playRound(playerSelection, computerSelection) {
         (pSelection === "scissors" && cSelection === "paper")
     ) {
         userScore++;
+        document.getElementById(playerSelection).classList.add('green-glow');
+        setTimeout(function(){ document.getElementById(playerSelection).classList.remove('green-glow')}, 500);
         playerScore_div.textContent = userScore.toString();
         if (userScore === 5) {
             finalMsg = "YOU WIN!";
@@ -59,6 +63,8 @@ function playRound(playerSelection, computerSelection) {
         (cSelection === "scissors" && pSelection === "paper")
     ) {
         computerScore++;
+        document.getElementById(playerSelection).classList.add('red-glow');
+        setTimeout(function(){ document.getElementById(playerSelection).classList.remove('red-glow')}, 500);
         computerScore_div.textContent = computerScore.toString();
         if (computerScore === 5) {
             finalMsg = "YOU LOSE!";
